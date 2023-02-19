@@ -1,0 +1,21 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.btn {
+  background-color:#cf9860;
+  color: #0c3f36;
+  padding: 5px 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100px;
+  height: 35px;
+  cursor:pointer;
+  user-select: none;
+}
+.navBtn:hover {
+    transition: all .3s ease;
+}
