@@ -36,7 +36,7 @@ const Banner = () => {
     <Grid  container sx={{height:"100%", paddingLeft:{sm:"1rem",md:"3rem"}, display:"flex", flexDirection:{xs:"column-reverse",sm:"row", md:"row"}}}>
       <Grid item  sm={6} sx={{height:{xs:"300", sm:"600px"},padding:" 1.5rem 1.7rem", display:"flex", flexDirection:"column", justifyContent:"center"}}>      
     <ThemeProvider theme={theme}>
-              <Typography sx={{fontWeight:"600", color:"#323232",fontSize:{xs:"3rem", sm:"2.5rem", md:"3rem", lg:"3.5rem"}, marginBottom:"1.5rem"}}>Oson xarid qiling</Typography>
+              <Typography sx={{fontWeight:"600", color:"#323232",fontSize:{xs:"2.2rem", sm:"2.5rem", md:"3rem", lg:"3.5rem"}, marginBottom:"1.5rem", lineHeight:"2.6rem"}}>Oson xarid qiling</Typography>
     </ThemeProvider>
               <Typography sx={{marginBottom:"1.2rem", color:"#323232"}}>
                 Gulbazar siz uchun eng yaxshi o'simliklarni topib beradi, ularni eshigingizga etkazib beradi va ularga g'amxo'rlik qilishga yordam beradi.
