@@ -1,19 +1,8 @@
 import React from 'react'
 import { Box, Container, createTheme, Grid, ThemeProvider, Typography } from '@mui/material';
+import Title from './Title';
 
 const Why = () => {
-    const theme = createTheme({
-        typography: {
-          fontFamily: [
-            "Lora",
-            '"Helvetica Neue"',
-            "Playfair Display",
-            "Poppins",
-            "Arial",
-            "serif",
-          ].join(","),
-        },
-      });
     const theme2 = createTheme({
         typography: {
           fontFamily: [
@@ -27,11 +16,9 @@ const Why = () => {
         },
       });
   return (
-    <Box sx={{padding:"6.25rem 0"}}>
+    <Box sx={{padding:"6.25rem 0", background:"#fff"}}>
          <Container>
-            <ThemeProvider theme={theme}>
-            <Typography variant={'h4'} sx={{textAlign:"center", marginBottom:"2rem"}}>Nima uchun GULBAZAR?</Typography>
-            </ThemeProvider>
+           <Title titleText={"Nima uchun GULBAZAR?"}/>
             <ThemeProvider theme={theme2}>
             <Grid container spacing={4}>
                 <Grid item md={4}  sx={{display:"flex",padding:"1rem", alignItems:"center", flexDirection:"column"}}>
