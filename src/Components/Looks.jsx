@@ -34,10 +34,10 @@ const Looks = () => {
   let arr = [
     {id:1, name:"Rob", type:"Xonadon uchun", price:"90 000", img:"https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1526658099/products/rubber-plant-f432b4.jpg"},
     {id:2, name:"Uy Palmasi", type:"Zallar uchun", price:"110 000", img:"https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1644934203/imeik3aflpe0b3o0rtgr.jpg"},
-    {id:1, name:"Pul daraxti", type:"Ofis uchun", price:"88 000", img:"https://b3n8a3n8.rocketcdn.me/wp-content/uploads/2022/12/pachira-aquatica-money-tree-01-1140x1710.jpg.webp"},
-    {id:1, name:"BUYMAKS gultuvaklari", type:"Xonadon uchun", price:"30 000", img:"https://m.media-amazon.com/images/I/71bBlYXTvqS.jpg"},
-    {id:1, name:"Keramika kichik gultuvaklar", type:"Ofis uchun", price:"50 000", img:"https://m.media-amazon.com/images/I/31HukflyPdL._AC_.jpg"},
-    {id:1, name:"Yukka", type:"Ochiq joylar uchun", price:"150 000", img:"https://balconygardenweb.b-cdn.net/wp-content/uploads/2017/09/2.-Yucca-21.jpg"},
+    {id:3, name:"Pul daraxti", type:"Ofis uchun", price:"88 000", img:"https://b3n8a3n8.rocketcdn.me/wp-content/uploads/2022/12/pachira-aquatica-money-tree-01-1140x1710.jpg.webp"},
+    {id:4, name:"BUYMAKS gultuvaklari", type:"Xonadon uchun", price:"30 000", img:"https://m.media-amazon.com/images/I/71bBlYXTvqS.jpg"},
+    {id:5, name:"Keramika kichik gultuvaklar", type:"Ofis uchun", price:"50 000", img:"https://m.media-amazon.com/images/I/31HukflyPdL._AC_.jpg"},
+    {id:6, name:"Yukka", type:"Ochiq joylar uchun", price:"150 000", img:"https://balconygardenweb.b-cdn.net/wp-content/uploads/2017/09/2.-Yucca-21.jpg"},
   ];
   return (
     <Box sx={{ padding: "6rem 3rem", background: "#fff" }}>
@@ -84,7 +84,7 @@ const Looks = () => {
             className="mySwiper"
           >
             {arr.map((item) => (
-              <SwiperSlide style={{ height: "450px", background: "#fff", border:"1px solid #ECE8DD" }}>
+              <SwiperSlide style={{ height: "480px", background: "#fff", border:"1px solid #ECE8DD" }}>
                 <Box sx={{ width: "100%", height: "100%" }}>
                   <Box sx={{ width: "100%", height: "60%" }}>
                     <img
