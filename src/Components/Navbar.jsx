@@ -9,9 +9,7 @@ import {
   IconButton,
   List,
   ListItem,
-  ThemeProvider,
-  useMediaQuery,
-  useTheme,
+  ThemeProvider
 } from "@mui/material";
 import {
   ArrowBackIosNew,
@@ -87,8 +85,8 @@ const Navbar = () => {
                 <ListItem disablePadding>
                   <ListItemButton
                     onClick={() => handleOpenSettings(index)}
-                    component={Link}
-                    to={menuItem.url}
+                    // component={Link}
+                    // to={menuItem.url}
                     sx={{width:"300px",display: "flex", justifyContent:"space-between"}}
                   >
                     <ListItemText primary={menuItem.title} />

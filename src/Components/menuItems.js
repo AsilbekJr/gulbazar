@@ -7,7 +7,7 @@
       submenu:[
         {
           title:"Barcha o'simliklar",
-          url:"barcha-osimliklar"
+          url:"o'simliklar"
         },
         {
          title:"Xonaki gullar",
@@ -30,7 +30,7 @@
       submenu:[
         {
           title:"Barcha gultuvaklar",
-          url:"barcha-gultuvaklar"
+          url:"gultuvaklar"
         },
         {
           title:"Xonaki gullar uchun",
@@ -54,7 +54,7 @@
       submenu:[
         {
           title:"Barcha maslahatlar",
-          url:"barcha-maslahatlar"
+          url:"parvarishlash"
         },
        {
         title:"Uskunalar va aksessuarlar",
@@ -86,7 +86,7 @@
       submenu:[
         {
           title:"Korxonalar uchun",
-          url:"korxonalar-uchun"
+          url:"korxonalar"
         },
         {
           title:"Offislar",
@@ -109,7 +109,7 @@
       submenu:[
         {
           title:"Sovg'a uchun gullar",
-          url:"sovg'alar"
+          url:"sovg'a"
         },
         {
           title:"To'y sovg'asi",

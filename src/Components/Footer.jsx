@@ -49,7 +49,7 @@ const Footer = () => {
                 <Typography sx={{color:"#fff", fontSize:".8rem", marginTop:"1.8rem", textAlign:"center"}}>© 2023 Gulbazar | Bukhara</Typography>                 
                 </Box> 
             </Grid>
-            <Grid item  sx={{display:"flex", justifyContent:{xs:"start"}}} xs={12} sm={4} md={4} lg={4}>
+            <Grid item  sx={{display:"flex", justifyContent:{xs:"start", md:"start", lg:"center"}}} xs={12} sm={4} md={4} lg={4}>
               <List>
         
                  <Typography sx={{color:"#fff", padding:"8px 16px", fontSize:"1rem", fontWeight:"700"}}> Ma'lumotlar</Typography>
@@ -85,7 +85,7 @@ const Footer = () => {
                  </Box> 
                 <Typography sx={{color:"#fff", fontSize:".8rem", marginTop:"1.8rem", textAlign:"center"}}>© 2023 Gulbazar | Bukhara</Typography>                 
             </Grid>
-            <Grid item  sx={{display:"flex", justifyContent:{xs:"start"}}} xs={12} sm={4} md={4} lg={4}>
+            <Grid item  sx={{display:"flex", justifyContent:{xs:"start", sm:"start", md:"end", lg:"center"}}} xs={12} sm={4} md={4} lg={4}>
               <List>
                  <Typography sx={{color:"#fff", padding:"8px 16px", fontSize:"1rem", fontWeight:"700"}}> Shartlar</Typography>
                 <ListItemButton component={Link} sx={{ fontWeight: "500", color: "#fff" }}>
