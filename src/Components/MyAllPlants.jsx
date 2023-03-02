@@ -4,16 +4,11 @@ import { Box, Grid, Typography, Button } from "@mui/material";
 import { plants } from "../data";
 import Title from "./Title";
 import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { MyFormControl, MyInputItem, MySelector } from "./AllPlants";
-// import { useDispatch, useSelector } from "react-redux";
-// import { SelectorAllSortedProduct } from "../../redux/sortedProductSlice";
-// import { MyContext } from "../../Context/Context";
-// import { addToCart } from "../../redux/cartSlice";
+import Select from "@mui/material/Select";
+import { MyFormControl, MyInputItem } from "./AllPlantsStyle";
 
-const Smartphones = () => {
+
+const MyAllPlants = () => {
   let allPlants = plants;
   const [productPerPage] = useState(15);
   const [currentPage, setCurrentPage] = useState(1);
@@ -30,12 +25,7 @@ const Smartphones = () => {
   const indexOfLastProduct = currentPage * productPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productPerPage;
 
-  // //   const sortedProducts = [];
-  //   allPlants.forEach(product => {
-  //     if(product.type === "Smartfonlar" ){
-  //       sortedProducts.push(product)
-  //     }
-  //   })
+  
 
   const currentPlant = allPlants.slice(indexOfFirstProduct, indexOfLastProduct);
 
@@ -53,7 +43,6 @@ const Smartphones = () => {
   function scrollToTop() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }
-  // const dispatch = useDispatch()
 
   return (
     <Box sx={{ padding: "8rem 1rem" }}>
@@ -182,4 +171,4 @@ const Smartphones = () => {
   );
 };
 
-export default Smartphones;
+export default MyAllPlants;

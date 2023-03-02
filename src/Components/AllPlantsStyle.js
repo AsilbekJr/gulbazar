@@ -18,7 +18,9 @@ export const MyFormControl = styled(FormControl)(({theme}) => ({
 })) 
 export const MyInputItem = styled(MenuItem)(({theme}) => ({
     [theme.breakpoints.down("sm")]:{
-        fontSize: ".8rem"
-    }
+        fontSize: ".8rem",
+        margin:"0rem 0"
+    },
+    margin:".8rem 0"
    
 })) 

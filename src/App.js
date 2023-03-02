@@ -4,14 +4,14 @@ import Xonaki from "./Components/Menu/Xonaki";
 import Layout from "./Components/Layout";
 import Home from "./Components/Home";
 import Gultuvaklar from "./Components/Gultuvaklar";
-import AllPlants from "./Components/AllPlants";
+import MyAllPlants from "./Components/MyAllPlants";
 function App() {
   return (
   <div style={{minHeight:"100vh"}}>
       <Routes>
           <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="osimliklar"  element={<AllPlants />}/>
+          <Route path="o'simliklar"  element={<MyAllPlants />}/>
           <Route path="xonaki"  element={<Xonaki />}/>
           <Route path="gultuvaklar"  element={<Gultuvaklar />}/>
         </Route>
