@@ -2,12 +2,12 @@
   export const menuItems = [
     {
       title:"O'simliklar",
-      url:"o'simliklar",
+      url:"osimliklar",
       img:"https://images.squarespace-cdn.com/content/v1/54fbb611e4b0d7c1e151d22a/1610074066643-OP8HDJUWUH8T5MHN879K/Snake+Plant.jpg?format=1000w",
       submenu:[
         {
           title:"Barcha o'simliklar",
-          url:"o'simliklar"
+          url:"osimliklars"
         },
         {
          title:"Xonaki gullar",

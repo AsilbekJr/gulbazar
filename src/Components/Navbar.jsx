@@ -85,8 +85,8 @@ const Navbar = () => {
                 <ListItem disablePadding>
                   <ListItemButton
                     onClick={() => handleOpenSettings(index)}
-                    // component={Link}
-                    // to={menuItem.url}
+                    component={Link}
+                    to={menuItem.url}
                     sx={{width:"300px",display: "flex", justifyContent:"space-between"}}
                   >
                     <ListItemText primary={menuItem.title} />
