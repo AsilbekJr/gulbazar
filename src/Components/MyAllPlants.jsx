@@ -70,10 +70,10 @@ const MyAllPlants = () => {
       </Box>
       <Grid container spacing={4}>
         {currentPlant.map((plant) => (
-          <Grid item xs={6} sm={6} md={4} lg={3}>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
             <Box
               sx={{
-                height: {xs:"300px", sm:"350px", md:"400", lg:"500px"},
+                height: {xs:"400px", sm:"350px", md:"400", lg:"500px"},
                 background: "#fff",
                 border: "1px solid #ECE8DD",
               }}
