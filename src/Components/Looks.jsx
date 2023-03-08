@@ -40,7 +40,7 @@ const Looks = () => {
     {id:6, name:"Yukka", type:"Ochiq joylar uchun", price:"150 000", img:"https://balconygardenweb.b-cdn.net/wp-content/uploads/2017/09/2.-Yucca-21.jpg"},
   ];
   return (
-    <Box sx={{ padding: "6rem 3rem", background: "#fff" }}>
+    <Box sx={{ padding: {xs:"4rem 1.5rem", sm:"4rem 2rem", md:"5rem 2rem", lg:"6rem 3rem"}, background: "#fff" }}>
       <Grid container spacing={3}>
         <Grid item md={3}>
           <ThemeProvider theme={theme}>

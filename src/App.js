@@ -6,8 +6,9 @@ import Home from "./Components/Home";
 import Gultuvaklar from "./Components/Gultuvaklar";
 import MyAllPlants from "./Components/MyAllPlants";
 function App() {
+
   return (
-  <div style={{minHeight:"100vh"}}>
+  <div style={{ minHeight:"100vh" }}>
       <Routes>
           <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
