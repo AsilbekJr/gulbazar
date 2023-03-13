@@ -56,10 +56,6 @@
           title:"Barcha maslahatlar",
           url:"parvarishlash"
         },
-       {
-        title:"Uskunalar va aksessuarlar",
-        url:"uskunalar"
-      },
       {
         title:"Xonaki gullar uchun",
         url:"xonaki-uskuna"
@@ -68,10 +64,6 @@
        { 
         title:"Ochiq osmon gullar uchun ",
         url:"hovli-uskuna"
-      },
-        {
-          title:"Yangicha dizayn",
-          url:"dizayn"
       },
         {
           title:"Mutaxasis yordami",
@@ -103,20 +95,20 @@
       ]
     },
     {
-      title:"Sovg'a uchun",
-      url:"sovg'a",
+      title:"Buketlar",
+      url:"buketlar",
       img:"https://cdn.shopify.com/s/files/1/2601/3352/products/HotRomance_001_1600x.jpg?v=1626848489",
       submenu:[
         {
-          title:"Sovg'a uchun gullar",
-          url:"sovg'a"
+          title:"Barchasi",
+          url:"barcha"
         },
         {
-          title:"To'y sovg'asi",
+          title:"Rafiqangizga",
           url:"to'y"
         },
         {
-          title:"bayram",
+          title:"Onajonlarga",
           url:"bayram"
         }
       ]

@@ -2,12 +2,12 @@ import React, { useContext, useState } from "react";
 import Pagination from "@mui/material/Pagination";
 import { Box, Grid, Typography, Button } from "@mui/material";
 // import { plants } from "../data";
-import Title from "../Title";
+import Title from "../../Title";
 import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
-import { MyFormControl, MyInputItem } from "../AllPlantsStyle";
+import { MyFormControl, MyInputItem } from "../../AllPlantsStyle";
 import { useDispatch, useSelector } from "react-redux";
-import { sortProduct } from "../../Rexux/sortProductSlice";
+import { sortProduct } from "../../../Rexux/sortProductSlice";
 import { motion } from 'framer-motion/dist/framer-motion';
 
 // let arr = [{name:"Atirgul", price:"200 000"},{name:"Lola", price:"300 000"},{name:"Kaktus", price:"100 000"},{name:"Rayhon", price:"500 000"},
@@ -21,8 +21,8 @@ import { motion } from 'framer-motion/dist/framer-motion';
 
 // console.log(res)
 
-const Xonaki = () => {
-  const allPlants = useSelector((state) => state.sortProduct);
+const Yangi = () => {
+  const allPlants = useSelector((state) => state.sortProduct.plants);
   const [productPerPage] = useState(15);
   const [currentPage, setCurrentPage] = useState(1);
   //Selection function
@@ -70,7 +70,7 @@ const Xonaki = () => {
         },
       }}
     >
-      <Title titleText={"Xonaki Gullar"} />
+      <Title titleText={"Yangi qo'shilganlar"} />
       <Box
         sx={{
           display: "flex",
@@ -109,7 +109,7 @@ const Xonaki = () => {
       <Grid container spacing={4}>
         {currentPlant.map((plant) => (
 
-         plant.type === "Xona uchun" && <Grid item xs={12} sm={6} md={4} lg={3}>
+         plant.new && <Grid item xs={12} sm={6} md={4} lg={3}>
             <Box
               sx={{
                 height: { xs: "400px", sm: "350px", md: "400", lg: "500px" },
@@ -117,7 +117,10 @@ const Xonaki = () => {
                 border: "1px solid #ECE8DD",
               }}
             >
-              <Box sx={{ width: "100%", height: "100%" }}>
+              <Box sx={{ width: "100%", height: "100%", position:"relative" }}>
+                <Box sx={{position:"absolute", width:"50px", top:"10px", left:"5px"}}>
+                    <img src="./img/new.png"  style={{width:"100%"}}/>
+                </Box>
                 <Box sx={{ width: "100%", height: "60%" }}>
                   <img
                     src={plant.images[0].img}
@@ -246,4 +249,4 @@ const Xonaki = () => {
   );
 };
 
-export default Xonaki;
+export default Yangi;

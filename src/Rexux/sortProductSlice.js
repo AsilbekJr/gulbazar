@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { plants } from "./../data";
+import { plants, pots } from "./../data";
 
-const initialState = plants;
+const initialState = {
+  plants: plants,
+  pots: pots
+};
 
 const sortProductSlice = createSlice({
   name: "sortProduct",
@@ -9,7 +12,17 @@ const sortProductSlice = createSlice({
   reducers: {
     sortProduct(state, action) {
       if (action.payload === "up" || action.payload === "down") {
-        state = state.sort((a, b) => {
+        state.plants = state.plants.sort((a, b) => {
+          if (action.payload === "up") {
+            return b.price - a.price;
+          }
+          if (action.payload === "down") {
+            return a.price - b.price;
+          }
+        });
+      }
+      if (action.payload === "up" || action.payload === "down") {
+        state.pots = state.pots.sort((a, b) => {
           if (action.payload === "up") {
             return b.price - a.price;
           }
@@ -29,5 +42,5 @@ const sortProductSlice = createSlice({
   },
 });
 
-export const { sortProduct, sortProduct2 } = sortProductSlice.actions;
+export const { sortProduct } = sortProductSlice.actions;
 export default sortProductSlice.reducer;
