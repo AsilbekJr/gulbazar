@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 import { useTheme } from '@emotion/react';
 
 const Logo = () => {
+  const scrollToTop = () => {
+    return window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
     const myTheme = useTheme();
   const matches = useMediaQuery(myTheme.breakpoints.down("sm"));
   return (
@@ -21,6 +25,7 @@ const Logo = () => {
             }}
             component={Link}
             to="/"
+            onClick={scrollToTop()}
           >
             <img
               src="./img/plants.png"

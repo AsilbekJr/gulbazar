@@ -10,6 +10,11 @@ const MenuItem = ({ items }) => {
   const handleHoverValue = (value) => {
     hoverValue.push(value);
   };
+
+  const scrollToTop = () => {
+    return window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <Box
       sx={{ margin: "0" }}
@@ -19,7 +24,7 @@ const MenuItem = ({ items }) => {
       <Link to={items.url} onMouseEnter={() => handleHoverValue(items)} style={{textDecoration:"none"}}>
         <Button
         className="mainItem"
-          onClick={() => (setHandleMouseEnter(false), setHoverValue([]))}
+          onClick={() => (setHandleMouseEnter(false), setHoverValue([]), scrollToTop())}
           contained
           sx={{ color: "#000", textTransform: "capitalize", margin: "0", height:"60px", padding:"0 10px" }}
         >
@@ -29,7 +34,7 @@ const MenuItem = ({ items }) => {
       {handleMouseEnter && (
         <Box className="submenu">
           {hoverValue.map((value) => (
-            <Dropdown submenus={value.submenu} items={value} setHandleMouseEnter={setHandleMouseEnter} setHoverValue = {setHoverValue} />
+            <Dropdown scrollToTop={scrollToTop} submenus={value.submenu} items={value} setHandleMouseEnter={setHandleMouseEnter} setHoverValue = {setHoverValue} />
           ))}
         </Box>
       )}

@@ -8,6 +8,9 @@ import { AnimatePresence } from "framer-motion/dist/framer-motion";
 import Hovli from "./Menu/Plants/Hovli";
 import Yangi from "./Menu/Plants/Yangi";
 import Pots from "./Menu/Pots/Pots";
+import ForHome from "./Menu/Pots/ForHome";
+import ForOuter from "./Menu/Pots/ForOuter";
+import NewDesign from "./Menu/Pots/NewDesign";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -22,6 +25,9 @@ const AnimatedRoutes = () => {
           <Route path="hovli" element={<Hovli />} />
           <Route path="gultuvaklar" element={<Pots />} />
           <Route path="yangi" element={<Yangi />} /> 
+          <Route path="xonaki-gullar" element={<ForHome />} /> 
+          <Route path="hovli-gullar" element={<ForOuter />} /> 
+          <Route path="yangicha-dizayn" element={<NewDesign />} /> 
         </Route>
       </Routes>
     </AnimatePresence>

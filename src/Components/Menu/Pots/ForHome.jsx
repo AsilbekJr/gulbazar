@@ -12,7 +12,7 @@ import { motion } from 'framer-motion/dist/framer-motion';
 
 
 
-const Pots = () => {
+const ForHome = () => {
     const allPlants = useSelector((state) => state.sortProduct.pots);
   const [productPerPage] = useState(15);
   const [currentPage, setCurrentPage] = useState(1);
@@ -100,6 +100,7 @@ const Pots = () => {
       <Grid container spacing={4}>
         {currentPlant.map((plant) => (
 
+plant.type === "Xonaki gullar uchun" &&
          <Grid item xs={12} sm={6} md={4} lg={3}>
             <Box
               sx={{
@@ -237,4 +238,4 @@ const Pots = () => {
   );
 };
 
-export default Pots;
+export default ForHome;

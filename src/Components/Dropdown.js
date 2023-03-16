@@ -1,7 +1,7 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import "./Dropdown.css"
-const Dropdown = ({ submenus, items,setHandleMouseEnter,setHoverValue }) => {
+const Dropdown = ({ scrollToTop,submenus, items,setHandleMouseEnter,setHoverValue }) => {
   return (
     <>
     <Box
@@ -29,7 +29,7 @@ const Dropdown = ({ submenus, items,setHandleMouseEnter,setHoverValue }) => {
             {submenus.map((submenu, index) => (
               <li key={index} style={{marginBottom:"1rem",listStyle:"none"}}>
                 <Link style={{textDecoration:"none"}} to={submenu.url}> 
-                <Button onClick={() => (setHandleMouseEnter(false),setHoverValue([]))} contained sx={{color:"#000", textTransform:"capitalize"}}>{submenu.title}</Button>
+                <Button onClick={() => (setHandleMouseEnter(false),setHoverValue([]),scrollToTop())} contained sx={{color:"#000", textTransform:"capitalize"}}>{submenu.title}</Button>
                 </Link>
               </li>
             ))}
