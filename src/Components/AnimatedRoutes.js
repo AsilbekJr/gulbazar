@@ -11,6 +11,7 @@ import Pots from "./Menu/Pots/Pots";
 import ForHome from "./Menu/Pots/ForHome";
 import ForOuter from "./Menu/Pots/ForOuter";
 import NewDesign from "./Menu/Pots/NewDesign";
+import AbouteCare from './Menu/Care/AbouteCare';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -28,6 +29,7 @@ const AnimatedRoutes = () => {
           <Route path="xonaki-gullar" element={<ForHome />} /> 
           <Route path="hovli-gullar" element={<ForOuter />} /> 
           <Route path="yangicha-dizayn" element={<NewDesign />} /> 
+          <Route path="parvarishlash" element={<AbouteCare />} /> 
         </Route>
       </Routes>
     </AnimatePresence>
