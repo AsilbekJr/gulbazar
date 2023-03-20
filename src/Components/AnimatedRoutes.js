@@ -12,6 +12,9 @@ import ForHome from "./Menu/Pots/ForHome";
 import ForOuter from "./Menu/Pots/ForOuter";
 import NewDesign from "./Menu/Pots/NewDesign";
 import AbouteCare from './Menu/Care/AbouteCare';
+import HomePlantCare from './Menu/Care/HomePlantCare';
+import OutdoorPlantsCare from "./Menu/Care/OutdoorPlantsCare";
+import Help from "./Menu/Care/Help";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -30,6 +33,9 @@ const AnimatedRoutes = () => {
           <Route path="hovli-gullar" element={<ForOuter />} /> 
           <Route path="yangicha-dizayn" element={<NewDesign />} /> 
           <Route path="parvarishlash" element={<AbouteCare />} /> 
+          <Route path="xonaki-uskuna" element={<HomePlantCare />} /> 
+          <Route path="hovli-uskuna" element={<OutdoorPlantsCare />} /> 
+          <Route path="yordam" element={<Help />} /> 
         </Route>
       </Routes>
     </AnimatePresence>
