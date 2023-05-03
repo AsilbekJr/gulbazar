@@ -26,6 +26,7 @@ import { Link } from "react-router-dom";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Logo from "./Logo";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const theme = createTheme({
@@ -39,7 +40,7 @@ const Navbar = () => {
       ].join(","),
     },
   });
-
+   const cart = useSelector(state => state.sortProduct.cart)
   const [openCollapse, setOpenCollapse] = useState(false);
 
   const [myMenuItem, setMyMenuItem] = useState(0);
@@ -163,7 +164,7 @@ const Navbar = () => {
             <Search
               sx={{ fontSize: {xs: "25px", sm:"30px"}, color: "#000", cursor: "pointer" }}
             />
-            <Badge badgeContent={4} color="success">
+            <Badge   badgeContent={cart ? cart.length : 0}  color="success">
               <ShoppingBagOutlined
                 sx={{ fontSize: {xs: "25px", sm:"30px"}, color: "#000", cursor: "pointer" }}
               />

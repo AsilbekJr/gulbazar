@@ -18,6 +18,8 @@ import {
   
   // import required modules
   import { Navigation, Pagination } from "swiper";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../Rexux/sortProductSlice";
   const BestSeller = () => {
     const theme = createTheme({
       typography: {
@@ -32,13 +34,23 @@ import {
       },
     });
     let arr = [
-      {id:1, name:"Kentiya Palmasi", type:"Zallar uchun", price:"300 000", img:"http://cdn.shopify.com/s/files/1/0562/5990/3625/products/90-110cm-kentia-palm-howea-forsteriana-21cm-pot-potted-houseplants-562565_grande.jpg?v=1645358330"},
-      {id:2, name:"Lizzie", type:"Xonadon uchun", price:"95 000", img:"https://i0.wp.com/www.plantingman.com/wp-content/uploads/2017/12/Busy-Lizzie-Flowering-plant.jpg?resize=900%2C900&ssl=1"},
-      {id:3, name:"Atirgulli buket", type:"Buket", price:"330 000", img:"https://florfashions.com/web/wp-content/uploads/2022/06/arreglos5702021-8.png"},
-      {id:4, name:"BUYMAKS gultuvaklari", type:"Xonadon uchun", price:"30 000", img:"https://m.media-amazon.com/images/I/71bBlYXTvqS.jpg"},
-      {id:5, name:"Keramika kichik gultuvaklar", type:"Ofis uchun", price:"50 000", img:"https://m.media-amazon.com/images/I/31HukflyPdL._AC_.jpg"},
-      {id:6, name:"Yukka", type:"Ochiq joylar uchun", price:"150 000", img:"https://balconygardenweb.b-cdn.net/wp-content/uploads/2017/09/2.-Yucca-21.jpg"},
+      {id:1, name:"Kentiya Palmasi", type:"Zallar uchun", price:"300 000", img:"http://cdn.shopify.com/s/files/1/0562/5990/3625/products/90-110cm-kentia-palm-howea-forsteriana-21cm-pot-potted-houseplants-562565_grande.jpg?v=1645358330", quantity:0},
+      {id:2, name:"Lizzie", type:"Xonadon uchun", price:"95 000", img:"https://i0.wp.com/www.plantingman.com/wp-content/uploads/2017/12/Busy-Lizzie-Flowering-plant.jpg?resize=900%2C900&ssl=1", quantity:0},
+      {id:3, name:"Atirgulli buket", type:"Buket", price:"330 000", img:"https://florfashions.com/web/wp-content/uploads/2022/06/arreglos5702021-8.png", quantity:0},
+      {id:4, name:"BUYMAKS gultuvaklari", type:"Xonadon uchun", price:"30 000", img:"https://m.media-amazon.com/images/I/71bBlYXTvqS.jpg", quantity:0},
+      {id:5, name:"Keramika kichik gultuvaklar", type:"Ofis uchun", price:"50 000", img:"https://m.media-amazon.com/images/I/31HukflyPdL._AC_.jpg", quantity:0},
+      {id:6, name:"Yukka", type:"Ochiq joylar uchun", price:"150 000", img:"https://balconygardenweb.b-cdn.net/wp-content/uploads/2017/09/2.-Yucca-21.jpg", quantity:0},
     ];
+
+
+
+    const dispatch = useDispatch();
+
+
+    
+
+
+
     return (
       <Box sx={{ padding: {xs:"4rem 1.5rem", sm:"4rem 2rem", md:"5rem 2rem", lg:"6rem 3rem"}, background: "#fff" }}>
         <Grid container spacing={3}>
@@ -109,7 +121,9 @@ import {
                       </Box>
                   <Box sx={{marginTop:"auto", display:"flex", flexDirection:"column"}}>
                   <Typography sx={{marginBottom:"1rem",fontWeight:"500", textAlign:"left", paddingLeft:"20px"}}>{item.price} so'm</Typography>
-                    <Button variant={"outlined"} sx={{color:"#3D3C42",borderRadius:"0",borderColor:"#3D3C42","&:hover":{borderColor:"#000", background:"#3D3C42", color:"#fff"}}}>Add to cart</Button>
+                    <Button variant={"outlined"} sx={{color:"#3D3C42",borderRadius:"0",borderColor:"#3D3C42","&:hover":{borderColor:"#000", background:"#3D3C42", color:"#fff"}}}
+                    onClick={() => dispatch(addToCart(item))}
+                    >Add to cart</Button>
                     </Box>
                     </Box>
                   </Box>

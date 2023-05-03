@@ -3,7 +3,8 @@ import { plants, pots } from "./../data";
 
 const initialState = {
   plants: plants,
-  pots: pots
+  pots: pots,
+  cart:[]
 };
 
 const sortProductSlice = createSlice({
@@ -31,16 +32,18 @@ const sortProductSlice = createSlice({
           }
         });
       }
-      // if (action.payload === "bestseller") {
-      //   return (state = state.filter((item) => item.bestseller === true));
-      // }
-      // if (action.payload === "new") {
-      //   return (state = state.filter((item) => item.new === true));
-      // }
-      
     },
+    addToCart(state, action){
+     let findSomeIndex  = state.cart.findIndex((item) => item.id === action.payload.id)
+     if(findSomeIndex >= 0 ){
+      state.cart[findSomeIndex].quantity +=1;
+     }
+     else{
+      state.cart.push(action.payload)
+     }
+    }
   },
 });
 
-export const { sortProduct } = sortProductSlice.actions;
+export const { sortProduct, addToCart } = sortProductSlice.actions;
 export default sortProductSlice.reducer;

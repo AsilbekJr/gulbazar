@@ -77,21 +77,17 @@
       img:"https://mazingus.com/wp-content/uploads/2022/06/Why-indoor-plants-are-good-and-What-are-the-benefits-of-plants-to-humans.jpeg",
       submenu:[
         {
-          title:"Korxonalar uchun",
-          url:"korxonalar"
-        },
-        {
           title:"Offislar",
           url:"offislar"
         },
         {
-          title:"Kutish zallari",
-          url:"zallar-uchun"
+          title:"Korxonalar uchun",
+          url:"korxonalar"
         },
         {
-          title:"Uy offisi",
-          url:"uy-uchun"
-        },
+          title:"Kutish zallari",
+          url:"zallar-uchun"
+        }
       ]
     },
     {
